@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الرايس للهاتف النقال</title>
+    <style>
+        /* تنسيقات عامة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* تنسيق العنوان الرئيسي */
+        .main-title {
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .main-title::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        /* تنسيق الأقسام */
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* تنسيق العناوين الفرعية */
+        .subtitle {
+            color: #1a2a6c;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #fdbb2d;
+            position: relative;
+        }
+        
+        .subtitle::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 50%;
+            height: 2px;
+            background: #b21f1f;
+        }
+        
+        /* تنسيق قائمة الألعاب */
+        .games-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .game-item {
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-right: 4px solid #1a2a6c;
+            transition: all 0.3s ease;
+        }
+        
+        .game-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        
+        .arabic {
+            color: #b21f1f;
+            font-weight: bold;
+        }
+        
+        /* تصميم رأس الصفحة */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-left: 15px;
+            font-size: 2.8rem;
+        }
+        
+        .contact-info {
+            color: white;
+            text-align: left;
+        }
+        
+        /* تصميم تذييل الصفحة */
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+        
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.7rem;
+            }
+            
+            .games-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-info {
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    </style>
+    <!-- رابط أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>شركة الرايس</span>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> 0911874090</p>
+                <p><i class="fas fa-map-marker-alt"></i> العنوان: غريان/شارع العيادة</p>
+            </div>
+        </div>
+        
+        <h1 class="main-title">شركة الرايس للهاتف النقال</h1>
+        
+        <div class="section">
+            <h2 class="subtitle">العاب بلايستيشن 4 و 5</h2>
+            <div class="games-list">
+                <div class="game-item">A plague Tale Innocence <span class="arabic">عربيه</span></div>
+                <div class="game-item">A way out</div>
+                <div class="game-item">Assassin's creed mirage <span class="arabic">عربيه</span></div>
+                <div class="game-item">Assassin's creed odyssey</div>
+                <div class="game-item">Assassin's creed rogue remastered</div>
+                <div class="game-item">Assassin's creed syndicate</div>
+                <div class="game-item">Assassin's creed Valhalla</div>
+                <div class="game-item">Stable girls</div>
+                <div class="game-item">Call of duty bo3</div>
+                <div class="game-item">Call of duty bo4</div>
+                <div class="game-item">Call of duty bo6</div>
+                <div class="game-item">Call of duty Advanced warfare</div>
+                <div class="game-item">Crash</div>
+                <div class="game-item">Dark souls HD</div>
+                <div class="game-item">Dexter</div>
+                <div class="game-item">Toy story 3</div>
+                <div class="game-item">EA FC25 <span class="arabic">عربيه</span></div>
+                <div class="game-item">EA FC26 <span class="arabic">عربيه</span></div>
+                <div class="game-item">Efootball</div>
+                <div class="game-item">Far cry 6 <span class="arabic">عربيه</span></div>
+                <div class="game-item">Ghost of Tsushima</div>
+                <div class="game-item">God of war</div>
+                <div class="game-item">Gta V</div>
+                <div class="game-item">It takes two</div>
+                <div class="game-item">Marvel spider man</div>
+                <div class="game-item">Minecraft</div>
+                <div class="game-item">Need for speed heat</div>
+                <div class="game-item">Pes 2025</div>
+                <div class="game-item">Resident evil 4</div>
+                <div class="game-item">Resident evil Village</div>
+                <div class="game-item">Red dead redemption 2</div>
+                <div class="game-item">Shadow of tomb raider</div>
+                <div class="game-item">Sniper ghost warrior Contract</div>
+                <div class="game-item">TEKKEN 7</div>
+                <div class="game-item">The last of us remastered</div>
+                <div class="game-item">The last of us Part 2</div>
+                <div class="game-item">The Witcher 3 Wild Hunt</div>
+                <div class="game-item">Uncharted the collection</div>
+                <div class="game-item">Watch dogs 2</div>
+                <div class="game-item">Watch dogs legion</div>
+                <div class="game-item">WWE 2K23</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="subtitle">العاب بلايستيشن 3</h2>
+            <div class="games-list">
+                <div class="game-item">Sniper ghost warrior 2</div>
+                <div class="game-item">Gta V</div>
+                <div class="game-item">Gta IV</div>
+                <div class="game-item">Gta SA</div>
+                <div class="game-item">Tomb raider</div>
+                <div class="game-item">Red dead redemption</div>
+                <div class="game-item">The amazing spider man 2</div>
+                <div class="game-item">Mafia 2</div>
+                <div class="game-item">Blur</div>
+                <div class="game-item">Fifa 18</div>
+                <div class="game-item">Fifa 19</div>
+                <div class="game-item">Pes 2025 <span class="arabic">عربية</span></div>
+                <div class="game-item">Infamous 2</div>
+                <div class="game-item">The last of us</div>
+                <div class="game-item">Call of duty world at war</div>
+                <div class="game-item">Call of duty bo3</div>
+                <div class="game-item">Call of duty MW 2</div>
+                <div class="game-item">Call of duty MW3</div>
+                <div class="game-item">Sniper elite V2</div>
+                <div class="game-item">Sniper elite 3</div>
+                <div class="game-item">Army of two</div>
+                <div class="game-item">Assassin's creed black flag</div>
+                <div class="game-item">Far cry 4</div>
+                <div class="game-item">Flow</div>
+                <div class="game-item">Call of Juarez</div>
+                <div class="game-item">Bio shock infinite</div>
+                <div class="game-item">Battlefield 4</div>
+                <div class="game-item">The walking dead</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>جميع الحقوق محفوظة &copy; 2025 شركة الرايس للهاتف النقال</p>
+            <p>متخصصون في بيع الهواتف النقالة والأجهزة الإلكترونية وألعاب البلايستيشن</p>
+        </div>
+    </div>
+</body>
+</html>
